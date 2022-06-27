@@ -4,5 +4,10 @@
   "description": "Slide decks from past presentations",
   "keywords": [],
   "author": "@pepicrft",
-  "license": "AGPL-3.0-only"
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "@slidev/cli": "^0.33.0",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*"
+  }
 }
