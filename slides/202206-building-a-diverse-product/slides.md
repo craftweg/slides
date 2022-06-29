@@ -1,36 +1,20 @@
 ---
-# try also 'default' to start simple
 theme: apple-basic
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
-# apply any windi css classes to the current slide
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
+image: https://unsplash.com/photos/QR0hHC5-xAg/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NXx8YmVybGluJTIwbmlnaHR8ZW58MHx8fHwxNjU2NDk2NzEy&force=true
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
+colorSchema: dark
 info: |
-  ## Slidev Starter Template
+  ## Building a diverse platform
   Presentation slides for developers.
-
   Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
   persist: false
-layout: intro
+layout: image
 ---
 
 # Building a diverse platform
-
-### Leveraging the developer community and Javascript
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
+## Leveraging the developer community and Javascript
 
 <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
@@ -47,310 +31,343 @@ layout: intro
 # Who am I?
 
 
-- 📝 **Developer tools' tinkerer** working on Shopify's CLI
-- 📱 **I used to develop iOS apps and tools with Swift**
-- 🇪🇸 **Originally from Spain** but I'm trapped in Berlin
-  
-<br>
-<br>
+- 📝 Developer tools' tinkerer working on [Shopify](https://shopify.com)'s <logos-shopify /> CLI
+- 📱 I used to develop iOS apps and tools with Swift <logos-swift />
+- 🐣 **Newbie** in the <logos-javascript /> and typescript ecosystems
+- 🥘 **Originally from Spain** but I'm trapped in Berlin
+- 🎈 Building an app framework [github.com/gestaltjs/gestalt](https://github.com/gestaltjs/gestalt)
+- 🌎 **@pepicrft** on the Internet
 
 ---
+layout: image
+image: https://unsplash.com/photos/OAGa7kxfDNY/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MXx8YmVybGluJTIwZGFya3xlbnwwfHx8fDE2NTY1MTU1Nzc&force=true
+---
 
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+# A bit of history
 
 ---
 layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+image: 'https://unsplash.com/photos/MGaFENpDCsw/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8ZWNvbW1lcmNlfGVufDB8fHx8MTY1NjQ1NjAzNQ&force=true'
 ---
 
-# Code
+# Every product starts with a need
 
-Use code snippets and get the highlighting directly![^1]
+Running a business and selling online is hard
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+You need to:
+- Run your own server
+- Update the software in it
+- Pay for expensive support
+- Deal with payment providers
+- ...
 
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
+**Internet can help but...**
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+---
+layout: fact
+---
 
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
+# The 🌍 is diverse
+So is the need space and therefore the solutions
+
+---
+
+# 1️⃣ Do we impose a single model onto everyone?
+<br/>
+
+## 😔 No, we need to embrace the world's diversity
+
+---
+
+# 2️⃣ Do we build as many versions of the product as shapes of ecommerce?
+<br/>
+
+## 😅 That'd be a nightmare engineering and product effort
+
+---
+
+## Wait, there are primitives and business logic that's common everywhere
+
+<br/>
+
+# Product, customer, merchant, order, invoice, inventory, payment, discount...
+
+---
+layout: statement
+---
+
+# What if we 
+# become a 🚀 platform?
+
+---
+
+# You need 3️⃣ things
+
+<br/>
+
+## 1. 🔁 Build Two-way interface to the core domain (HTTP APIs and Webhooks)
+## 2. 👩🏾‍💻 Foster developer ecosystem (docs, tools, examples, events)
+## 3. 📦 <span class="highlight">Extensibility technologies and surfaces</span>
+
+(And dog-fooding 🐶)
 
 <style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+.highlight {
+  color: DeepSkyBlue
 }
 </style>
 
 ---
+layout: statement
+---
 
-# Components
+# What can be extended 🧐?
 
-<div grid="~ cols-2 gap-4">
-<div>
+---
+layout: statement
+---
 
-You can use Vue components directly inside your slides.
+# 1. Storefront
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+It's the front side of a store
+
+---
+layout: statement
+---
+
+### Storefront Extensibility
+
+# Liquid 🎨
+
+Third-party (3P) devs can implement storefronts
+<br/>
+Liquid templates declare how to present stores' state
+<br/>
+
+<br/>
 
 ```html
-<Counter :count="10" />
+{% # product.title -> Health potion %}
+
+{{ product.title | upcase | remove: 'HEALTH' }}
 ```
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-
 ---
-class: px-20
+layout: statement
 ---
 
-# Themes
+# 2. Admin
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+It's the dashboard to manage your store
 
 ---
-preload: false
+layout: statement
 ---
 
-# Animations
+### Admin extensibility
 
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
+# Embedded app 💻
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }">
-  Slidev
-</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
+We load an app URL in an `<iframe/>`
+<br/>
+The app has a session to send authenticated requests to the API
+<br/>
+UI consistency is achieved through a design system, [Polaris](https://polaris.shopify.com/)
 
 ---
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
+layout: image
+image: '/app.png'
 ---
 
-# Diagrams
+---
+layout: image-right
+image: '/admin-links.jpg'
+---
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+### Admin extensibility
 
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
+# Link extensions 💻
 
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
+- Apps can declare links that are hooked into the admin UI
+- Links deep-link to a page inside the embedded app
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+---
+layout: statement
+---
 
-```plantuml {scale: 0.7}
-@startuml
+# And <logos-javascript /> and <logos-react /> happened
 
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
+### Including <logos-react /> Native
+
+---
+layout: statement
+---
+
+# Admin and mobile apps 
+# are now <logos-react />
+
+---
+layout: statement
+---
+
+# We have a common <span class="language">language</span> 
+# and <span class="mental-model">mental model</span> to declare
+# how state is <span class="presented">presented</span>
+
+<style>
+  
+.language {
+  color: DeepSkyBlue
 }
 
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
+.mental-model {
+  color: Gold
 }
-
-cloud {
-  [Example 1]
+.presented {
+  color: LimeGreen
 }
+</style>
 
+---
+layout: statement
+---
 
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
+# Why not basing our 
+# extensibility upon <logos-react/>?
+
+---
+layout: image-right
+image: '/checkout-extension.png'
+---
+
+# UI Extensions
+### Powered by [remote-ui](https://github.com/shopify/remote-ui)
+
+- The platform surface has <span class="highlight">extension points</span>
+- UI extensions are loaded in extension points
+- They are <span class="highlight">component trees</span> (e.g. React component)
+- They get rendered in a <span class="highlight">sandboxed</span> environment: web workers
+
+<style>
+.highlight {
+  color: LimeGreen
 }
+</style>
 
+---
+layout: statement
+---
 
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
+# And it works for 📱
+# apps too
 
-@enduml
+---
+layout: center
+---
+
+```ts {all|1-4|6-7|9-17|all}
+import { 
+  extend, render, useExtensionInput, 
+  BlockStack, Button, Heading, Image 
+} from '@shopify/post-purchase-ui-extensions-react';
+
+extend('Checkout::PostPurchase::ShouldRender', async () => { render : true });
+render('Checkout::PostPurchase::Render', () => <App />);
+
+export function App() {
+  const {done} = useExtensionInput();
+  return (
+    <BlockStack spacing="loose" alignment="center">
+      <Heading>My first post-purchase extension</Heading>
+      <Button submit onPress={done}>Click me</Button>
+    </BlockStack>
+  )
+}
 ```
 
-</div>
+---
+layout: statement
+---
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+# Remember <span class="liquid">Liquid</span>?
 
+<br/>
+
+## Developers want to build with modern tooling,
+## mental models and have access to a rich ecosystem
+## of building blocks
+
+<style>
+.liquid {
+  color: DeepSkyBlue
+}
+</style>
+
+---
+layout: center
+---
+
+![Hydrogen](/hydrogen.png)
+
+# [Hydrogen](https://hydrogen.shopify.dev/)
+
+- <logos-react/>-based opinionated framework 
+- SSR with progressive hydration (SEO)
+- Hosted by <logos-shopify/> close to the store data (low latency)
+- E-Commerce-oriented APIs (e.g. hooks)
+
+---
+layout: statement
+---
+
+# Developers win
+# Users win
+# Projects win
+
+---
+layout: default
+---
+
+# Takeaways
+
+- Adopt the <span class="turquoise">platform</span> mindset.
+- Identify what's the platform's <span class="purple">core</span>
+- Make it extensible <span class="blue">let developers extend it</span>
+- Don't reinvent the wheel, <span class="green">build upon declarative frameworks</span>
+- Offer great <span class="gold">tools and docs</span> (e.g. CLI and templates)  
+- Build a <span class="pale-green">community</span> and empower it.
+
+## References
+
+- [github.com/shopify/remote-ui](https://github.com/shopify/remote-ui)
+- [shopify.dev](https://shopify.dev/)
+
+<style>
+.turquoise {
+  color: MediumTurquoise
+}
+.purple {
+  color: MediumOrchid
+}
+.blue {
+  color: DeepSkyBlue
+}
+.gold {
+  color: Gold
+}
+.green {
+  color: LimeGreen
+}
+.pale-green {
+  color: PaleGreen
+}
+</style>
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# Danke 🤲
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+## Questions?

@@ -5,15 +5,19 @@ importers:
   .:
     specifiers:
       '@slidev/theme-apple-basic': ^0.20.0
+      dracula-prism: ^2.1.13
     devDependencies:
       '@slidev/theme-apple-basic': 0.20.0
+      dracula-prism: 2.1.13
 
   slides/202206-building-a-diverse-product:
     specifiers:
+      '@iconify-json/logos': ^1.1.3
       '@slidev/cli': ^0.33.0
       '@slidev/theme-default': '*'
       '@slidev/theme-seriph': '*'
     devDependencies:
+      '@iconify-json/logos': 1.1.3
       '@slidev/cli': 0.33.1
       '@slidev/theme-default': 0.21.2
       '@slidev/theme-seriph': 0.21.2
@@ -64,6 +68,12 @@ packages:
 
   /@iconify-json/carbon/1.1.6:
     resolution: {integrity: sha512-3a/D7qzqBO6hsDmp6/k2eFfJzL1sw1yCQOq2yr86el2CzgMmQdKYROOyCCDNBxGn+dkkc/Rx1/8OEciakAJcFg==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
+
+  /@iconify-json/logos/1.1.3:
+    resolution: {integrity: sha512-RSBjoqoYaJX/M6wRbpEey5Da6ri9Te5f3wx2dkPAhbv039pK5m2uthuSjQbC0sZk7xWlMBj852xXvagavbgnpw==}
     dependencies:
       '@iconify/types': 1.1.0
     dev: true
@@ -1164,6 +1174,10 @@ packages:
 
   /dompurify/2.3.8:
     resolution: {integrity: sha512-eVhaWoVibIzqdGYjwsBWodIQIaXFSB+cKDf4cfxLMsK0xiud6SE+/WCVx/Xw/UwQsa4cS3T2eITcdtmTg2UKcw==}
+    dev: true
+
+  /dracula-prism/2.1.13:
+    resolution: {integrity: sha512-mgm8Nr/X0RGUz/wpha88dKN/xw0QIGK8BQmWXrzgtOp9be+qcKiFEa2J5SQ3+/WNvL5sPPtNQXPL+Vy//Q8+dg==}
     dev: true
 
   /drauu/0.3.0:
