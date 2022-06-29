@@ -6,8 +6,6 @@
   "author": "@pepicrft",
   "license": "AGPL-3.0-only",
   "devDependencies": {
-    "@slidev/cli": "^0.33.0",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/theme-apple-basic": "^0.20.0"
   }
 }

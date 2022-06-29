@@ -1,6 +1,6 @@
 ---
 # try also 'default' to start simple
-theme: seriph
+theme: apple-basic
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://source.unsplash.com/collection/94734566/1920x1080
@@ -19,11 +19,12 @@ info: |
 # persist drawings in exports and build
 drawings:
   persist: false
+layout: intro
 ---
 
-# Welcome to Slidev
+# Building a diverse platform
 
-Presentation slides for developers
+### Leveraging the developer community and Javascript
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -41,45 +42,17 @@ Presentation slides for developers
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
-
 ---
 
-# What is Slidev?
+# Who am I?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
+- 📝 **Developer tools' tinkerer** working on Shopify's CLI
+- 📱 **I used to develop iOS apps and tools with Swift**
+- 🇪🇸 **Originally from Spain** but I'm trapped in Berlin
+  
 <br>
 <br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
 
 ---
 
