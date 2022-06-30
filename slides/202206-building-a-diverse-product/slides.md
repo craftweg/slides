@@ -35,7 +35,6 @@ layout: image
 - 📱 I used to develop iOS apps and tools with Swift <logos-swift />
 - 🐣 **Newbie** in the <logos-javascript /> and typescript ecosystems
 - 🥘 **Originally from Spain** but I'm trapped in Berlin
-- 🎈 Building an app framework [github.com/gestaltjs/gestalt](https://github.com/gestaltjs/gestalt)
 - 🌎 **@pepicrft** on the Internet
 
 ---
@@ -127,7 +126,7 @@ layout: statement
 layout: statement
 ---
 
-# 1. Storefront
+# Storefront
 
 It's the front side of a store
 
@@ -153,10 +152,21 @@ Liquid templates declare how to present stores' state
 ```
 
 ---
+layout: center
+---
+
+```mermaid {scale: 0.8}
+graph TD
+A[Store] --> |State| B[Renderer]
+D[Theme] --> |Liquid| B[Renderer]
+B[Renderer] --> |HTML/CSS/JS| C[Storefront]
+```
+
+---
 layout: statement
 ---
 
-# 2. Admin
+# Admin
 
 It's the dashboard to manage your store
 
@@ -175,9 +185,10 @@ The app has a session to send authenticated requests to the API
 UI consistency is achieved through a design system, [Polaris](https://polaris.shopify.com/)
 
 ---
-layout: image
-image: '/app.png'
+layout: center
 ---
+
+![App](/app.png)
 
 ---
 layout: image-right
@@ -186,7 +197,7 @@ image: '/admin-links.jpg'
 
 ### Admin extensibility
 
-# Link extensions 💻
+# Link extensions 🔗
 
 - Apps can declare links that are hooked into the admin UI
 - Links deep-link to a page inside the embedded app
@@ -204,7 +215,7 @@ layout: statement
 ---
 
 # Admin and mobile apps 
-# are now <logos-react />
+# became <logos-react />
 
 ---
 layout: statement
@@ -219,7 +230,6 @@ layout: statement
 .language {
   color: DeepSkyBlue
 }
-
 .mental-model {
   color: Gold
 }
@@ -235,22 +245,58 @@ layout: statement
 # Why not basing our 
 # extensibility upon <logos-react/>?
 
+```mermaid {scale: 0.8}
+graph TD
+A[Store] --> |State| B[Renderer,color:red]
+D[Extension code] --> |Javascript| B[Renderer]
+E[Extension point] --> C[Mount]
+B[Renderer] --> |Component tree| C[Mount]
+F[Shopify component tree] --> C[Mount]
+```
+
 ---
-layout: image-right
-image: '/checkout-extension.png'
+layout: statement
 ---
 
-# UI Extensions
-### Powered by [remote-ui](https://github.com/shopify/remote-ui)
-
-- The platform surface has <span class="highlight">extension points</span>
-- UI extensions are loaded in extension points
-- They are <span class="highlight">component trees</span> (e.g. React component)
-- They get rendered in a <span class="highlight">sandboxed</span> environment: web workers
+# <span class="blue">UI Extensions</span>
+## Powered by Remote UI
+## [github.com/shopify/remote-ui](http://github.com/shopify/remote-ui)
 
 <style>
-.highlight {
-  color: LimeGreen
+.blue {
+  color: DeepSkyBlue
+}
+</style>
+
+---
+layout: statement
+---
+
+# Components are rendered in a <span class="gold">context</span> other than UI thread
+## For example, web workers
+
+<style>
+.gold {
+  color: Gold
+}
+</style>
+
+---
+layout: statement
+---
+
+# Remote 🛰
+### Provides a way to manage the tree of components
+
+<br/>
+<br/>
+
+# Host 🌍
+### Maps remote components to UI components
+
+<style>
+.gold {
+  color: Gold
 }
 </style>
 
@@ -264,6 +310,9 @@ layout: statement
 ---
 layout: center
 ---
+
+# Post purchase UI extension
+<br/>
 
 ```ts {all|1-4|6-7|9-17|all}
 import { 
@@ -284,6 +333,47 @@ export function App() {
   )
 }
 ```
+
+---
+layout: statement
+---
+
+<div class="header-primary flex flex-col">
+  <div>Checkout UI</div>
+  <div>POS UI</div>
+  <div>Post-purchase UI</div>
+  <div>Web pixel</div>
+  <div>Theme app extension (Liquid)</div>
+  <div>Discounts (Function)</div>
+  <div>Payment customization (Function)</div>
+</div>
+
+<style>
+.header-primary{
+  background-image: linear-gradient(to bottom, #E70000,  #FF8C00,  #FFEF00,  #00811F,  #0044FF,  #760089);
+  font-size: 3rem;
+  -webkit-background-clip: text;
+  color:transparent;
+}
+</style>
+
+---
+layout: center
+---
+
+![Create app workflow](/create-app.gif)
+
+---
+layout: center
+---
+
+![Create extension workflow](/create-extension.gif)
+
+---
+layout: center
+---
+
+![Product subscription](/product-subscription.gif)
 
 ---
 layout: statement
